@@ -11,9 +11,9 @@ app = FastAPI(title="DeepFake Detection API")
 # =========================
 # Configuration
 # =========================
-MODEL_PATH = "model\\best_model.h5"
+MODEL_PATH = "model\\model.h5"
 
-FILES_DIR = r"file_dir" # Change this to your actual files directory
+FILES_DIR = r"C:\\Users\\aak" # Change this to your actual files directory
 # =========================
 # Load model ONCE (inference mode)
 # =========================
@@ -23,7 +23,7 @@ model = load_model(MODEL_PATH, compile=False)
 # =========================
 # ELA Processing Function
 # =========================
-def convert_to_ela_image(path: str, quality: int = 75) -> Image.Image:
+def convert_to_ela_image(path: str, quality: int = 85) -> Image.Image:
     """
     Perform Error Level Analysis (ELA) on an image.
     """
